@@ -12,7 +12,6 @@ NOTE: use a loop to make this happen.
 */
 
 // this function returns the numbers from console.log
-
 function sumAll(options){
   var total = 0;
   for (var i = 0; i < options.length; i++) {

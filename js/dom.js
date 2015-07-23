@@ -9,11 +9,12 @@ Hints for the first problem:
     - takes the value returned by the `sum` function and displays it on the page
 
 */
+// find the sum-all id and add the event listener click and creat an empty function
 var addAll = document.getElementById("sum-all").addEventListener("click", function(){
+  // find element "prices"
   var prices = document.getElementsByName("prices")[0].children;
+  // finding the id "answers"
     var sumAnswer = document.getElementById("answers"); sumAnswer.innerHTML = (sumAll(prices));
-
-
 });
 
 
