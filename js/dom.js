@@ -11,11 +11,29 @@ Hints for the first problem:
 */
 // find the sum-all id and add the event listener click and creat an empty function
 var addAll = document.getElementById("sum-all").addEventListener("click", function(){
-  // find element "prices"
-  var prices = document.getElementsByName("prices")[0].children;
-  // finding the id "answers"
-    var sumAnswer = document.getElementById("answers"); sumAnswer.innerHTML = (sumAll(prices));
+
+   // find element "prices"
+  var prices = document.getElementById("prices");
+  var options = prices.options;
+
+   // find id "answers"
+   addAnswerToList(sumAll(options));
+
 });
+
+document.getElementById('count-selected').addEventListener('click', function(){
+    var prices = document.getElementById("prices");
+    var options = prices.options;
+
+addAnswerToList(countSelected(options));
+});
+
+function addAnswerToList(answer) {
+    var answerList = document.getElementById("answers");
+  var li = document.createElement('li');
+  li.innerHTML = (answer);
+  answerList.appendChild(li);
+}
 
 
 

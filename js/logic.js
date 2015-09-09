@@ -20,4 +20,14 @@ function sumAll(options){
   return total;
 }
 
+function countSelected(options) {
+    var count = 0;
+    for (var i = 0; i <options.length; i++) {
+        if (options[i].selected) {
+            count ++;
+        }
+    }
+    return count;
+}
+
 console.log(sumAll([3,4,5]));
